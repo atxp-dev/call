@@ -50,23 +50,45 @@ atxp-call <server> <tool> <arguments_json> [--x402] [--no-parse] [--verbose]
 
 ## Examples
 
-Call a tool with basic arguments:
+### ATXP MCP Servers
+
+Search X (formerly Twitter) for posts:
 
 ```bash
-./atxp-call.js example.com my-tool '{"param1": "value1", "param2": "value2"}'
+./atxp-call.js x-live-search.mcp.atxp.ai x_live_search '{"query": "What are the latest updates from Space X?"}'
 ```
 
-Call a tool with x402 mode enabled:
+Perform web search:
 
 ```bash
-./atxp-call.js example.com my-tool '{"param1": "value1"}' --x402
+./atxp-call.js search.mcp.atxp.ai search '{"query": "latest AI developments"}'
 ```
 
-Get the full result object:
+Crawl a webpage:
 
 ```bash
-./atxp-call.js example.com my-tool '{}' --no-parse
+./atxp-call.js crawl.mcp.atxp.ai crawl '{"url": "https://example.com"}'
 ```
+
+Generate an image:
+
+```bash
+./atxp-call.js image.mcp.atxp.ai generate_image '{"prompt": "A sunset over mountains", "sync": true}'
+```
+
+Execute code in a sandbox:
+
+```bash
+./atxp-call.js code.mcp.atxp.ai execute_code '{"language": "python", "code": "print(\"Hello, World!\")"}'
+```
+
+Research a topic:
+
+```bash
+./atxp-call.js research.mcp.atxp.ai research '{"query": "quantum computing applications", "depth": "quick"}'
+```
+
+See available MCP servers at: https://docs.atxp.ai/client/mcp_servers
 
 ## Dependencies
 
