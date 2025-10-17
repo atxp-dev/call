@@ -1,0 +1,16 @@
+{
+  "name": "call",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "DNR",
+  "type": "commonjs",
+  "main": "atxp-call.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@atxp/client": "^0.7.4",
+    "@atxp/x402": "^0.7.4"
+  }
+}
