@@ -1,6 +1,6 @@
 {
   "name": "atxp-call",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A command-line tool for calling tools on ATXP MCP servers",
   "license": "MIT",
   "author": "DNR",
