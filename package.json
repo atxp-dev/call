@@ -1,16 +1,26 @@
 {
-  "name": "call",
+  "name": "atxp-call",
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
+  "description": "A command-line tool for calling tools on ATXP MCP servers",
+  "license": "MIT",
   "author": "DNR",
   "type": "commonjs",
   "main": "atxp-call.js",
+  "bin": {
+    "atxp-call": "./atxp-call.js"
+  },
+  "keywords": [
+    "atxp",
+    "mcp",
+    "cli",
+    "tool"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@atxp/client": "^0.7.4",
-    "@atxp/x402": "^0.7.4"
+    "@atxp/client": "^0.10.5",
+    "@atxp/x402": "^0.10.5",
+    "dotenv": "^16.4.5"
   }
 }
