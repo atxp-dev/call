@@ -4,8 +4,16 @@ A command-line tool for calling tools on ATXP MCP servers.
 
 ## Installation
 
+Run directly with npx (no installation required):
+
 ```bash
-npm install
+npx atxp-call <server> <tool> <arguments_json>
+```
+
+Or install globally:
+
+```bash
+npm install -g atxp-call
 ```
 
 ## Configuration
@@ -27,13 +35,7 @@ You can find your connection string at https://accounts.atxp.ai
 ## Usage
 
 ```bash
-./atxp-call.js <server> <tool> <arguments_json> [--x402] [--no-parse] [--verbose]
-```
-
-Or if installed globally:
-
-```bash
-atxp-call <server> <tool> <arguments_json> [--x402] [--no-parse] [--verbose]
+npx atxp-call <server> <tool> <arguments_json> [--x402] [--no-parse] [--verbose]
 ```
 
 ### Required Arguments
@@ -55,37 +57,37 @@ atxp-call <server> <tool> <arguments_json> [--x402] [--no-parse] [--verbose]
 Search X (formerly Twitter) for posts:
 
 ```bash
-./atxp-call.js x-live-search.mcp.atxp.ai x_live_search '{"query": "What are the latest updates from Space X?"}'
+npx atxp-call x-live-search.mcp.atxp.ai x_live_search '{"query": "What are the latest updates from Space X?"}'
 ```
 
 Perform web search:
 
 ```bash
-./atxp-call.js search.mcp.atxp.ai search '{"query": "latest AI developments"}'
+npx atxp-call search.mcp.atxp.ai search '{"query": "latest AI developments"}'
 ```
 
 Crawl a webpage:
 
 ```bash
-./atxp-call.js crawl.mcp.atxp.ai crawl '{"url": "https://example.com"}'
+npx atxp-call crawl.mcp.atxp.ai crawl '{"url": "https://example.com"}'
 ```
 
 Generate an image:
 
 ```bash
-./atxp-call.js image.mcp.atxp.ai generate_image '{"prompt": "A sunset over mountains", "sync": true}'
+npx atxp-call image.mcp.atxp.ai generate_image '{"prompt": "A sunset over mountains", "sync": true}'
 ```
 
 Execute code in a sandbox:
 
 ```bash
-./atxp-call.js code.mcp.atxp.ai execute_code '{"language": "python", "code": "print(\"Hello, World!\")"}'
+npx atxp-call code.mcp.atxp.ai execute_code '{"language": "python", "code": "print(\"Hello, World!\")"}'
 ```
 
 Research a topic:
 
 ```bash
-./atxp-call.js research.mcp.atxp.ai research '{"query": "quantum computing applications", "depth": "quick"}'
+npx atxp-call research.mcp.atxp.ai research '{"query": "quantum computing applications", "depth": "quick"}'
 ```
 
 See available MCP servers at: https://docs.atxp.ai/client/mcp_servers
